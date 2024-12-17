@@ -1,0 +1,249 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body and Background */
+body {
+    background: #121212;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 70px;
+    /* Adjust to prevent header overlap */
+}
+
+/* Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #1e1f29;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #b0b0b0;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #8e44ad;
+    /* Purple hover effect */
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background-color: #8e44ad;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+    background-color: #9b59b6;
+    /* Light purple on hover */
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Image */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('bac.avif') no-repeat center center/cover;
+    transform: rotate(-5deg);
+    /* Tilt the image */
+    transform-origin: left center;
+    /* Make sure the image tilts from the left side */
+    z-index: 1;
+    transition: transform 0.5s ease-out;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    transform: translateX(-30px);
+    /* Move content to the left */
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero .highlight {
+    color: #8e44ad;
+    /* Purple accent */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #b0b0b0;
+}
+
+.cta-btn {
+    padding: 10px 30px;
+    background-color: #8e44ad;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+    background-color: #9b59b6;
+    /* Light purple */
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 40px;
+    background: #1e1f29;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #b0b0b0;
+}
+
+/* Portfolio Section */
+.content-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.project-card {
+    background: #2e2e2e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    display: block;
+}
+
+.project-card p {
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer */
+footer {
+    background: #1e1f29;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Software Logos Section */
+#software-logos .logos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#software-logos .logo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    /* Adjust the width of each logo container */
+    max-width: 150px;
+    margin: 10px;
+}
+
+#software-logos img {
+    width: 80%;
+    /* Adjust this value to scale the logos to a smaller size */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+#software-logos p {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
